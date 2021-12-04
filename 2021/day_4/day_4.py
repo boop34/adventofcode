@@ -53,7 +53,6 @@ def first_puzzle(boards, nums):
                 return board.get_score() * num
 
 def second_puzzle(boards, nums):
-    a = 1
     arr = [b.get_id() for b in boards]
 
     for num in nums:
