@@ -50,10 +50,21 @@ def first_puzzle(boards, nums):
             board.mark(num)
 
             if board.bingo():
-                return board.get_score() * num, num
+                return board.get_score() * num
 
 def second_puzzle(boards, nums):
-    pass
+    a = 1
+    arr = [b.get_id() for b in boards]
+
+    for num in nums:
+        for board in boards:
+            board.mark(num)
+
+            if board.bingo():
+                if board.get_id() in arr:
+                    arr.remove(board.get_id())
+                if len(arr) == 0:
+                    return board.get_score() * num
 
 
 if __name__ == '__main__':
