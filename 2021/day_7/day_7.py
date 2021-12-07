@@ -33,7 +33,8 @@ def second_puzzle(pos):
     cost1, cost2 = 0, 0
     avg1, avg2 = sum(pos) // n, round(sum(pos) / n)
 
-    foo = lambda x: sum([i + 1 for i in range(x)])
+    # foo = lambda x: sum([i + 1 for i in range(x)])
+    foo = lambda x: int(x * (x + 1) / 2)
 
     for i in range(n):
         cost1 += foo(abs(pos[i] - avg1))
