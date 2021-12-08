@@ -1,5 +1,49 @@
 #!/usr/bin/env python3
 
+'''
+  0:      1:      2:      3:      4:
+ aaaa    ....    aaaa    aaaa    ....
+b    c  .    c  .    c  .    c  b    c
+b    c  .    c  .    c  .    c  b    c
+ ....    ....    dddd    dddd    dddd
+e    f  .    f  e    .  .    f  .    f
+e    f  .    f  e    .  .    f  .    f
+ gggg    ....    gggg    gggg    ....
+
+
+  5:      6:      7:      8:      9:
+ aaaa    aaaa    aaaa    aaaa    aaaa
+b    .  b    .  .    c  b    c  b    c
+b    .  b    .  .    c  b    c  b    c
+ dddd    dddd    ....    dddd    dddd
+.    f  e    f  .    f  e    f  .    f
+.    f  e    f  .    f  e    f  .    f
+ gggg    gggg    ....    gggg    gggg
+
+1 -> 2 segments (unique)
+4 -> 4 segments (unique)
+7 -> 3 segments (unique)
+8 -> 7 segments (unique)
+
+0, 6, 9 -> 6 segments
+2, 3, 5 -> 5 segmetns
+
+7 - 1 -> seg_a
+4 - 1 -> seg_b&d
+8 - 7 - seg_b&d -> seg_e&g
+
+for all 6 length digits (0, 6, 9)
+    contains seg_b&d + seg_e&g -> 6
+    contains only seg_b&d -> 9
+    contains only seg_e&g -> 0
+
+6 - seg_a - seg_b&d - seg_e&g -> seg_f
+1 - seg_f -> seg_c
+9 - seg_a - 4 -> seg_g
+seg_e&g - seg_g -> seg_e
+8 - 0 -> seg_d
+seg_b&d - seg_d -> seg_b
+'''
 
 def first_puzzle(entries):
     cnt = 0
