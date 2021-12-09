@@ -151,3 +151,4 @@ if __name__ == '__main__':
 
     print(first_puzzle(entries))
     print(second_puzzle(entries))
+
