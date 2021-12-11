@@ -94,5 +94,6 @@ if __name__ == '__main__':
             mat2.append([int(i) for i in line.strip()])
             
     print(first_puzzle(mat1, 100))
+    # or print(second_puzzle(mat1) + 100) as the original matrix is already processed for 100 steps in the first puzzle
     print(second_puzzle(mat2))
 
