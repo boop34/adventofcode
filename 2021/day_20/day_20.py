@@ -6,7 +6,7 @@ def first_puzzle(algo, mat, enhance_cnt):
 
     val = '.'
     for i in range(enhance_cnt):
-        mat = pad_dark(mat, 1, val)
+        mat = pad(mat, 1, val)
         mat = enhance(algo, mat, val)
         val = algo[int((val * 9).replace('.', '0').replace('#', '1'), 2)]
 
@@ -20,7 +20,7 @@ def second_puzzle(algo, mat, enhance_cnt):
     return first_puzzle(algo, mat, enhance_cnt)
 
 
-def pad_dark(mat, p, val):
+def pad(mat, p, val):
     n = len(mat) + (p * 2)
     m = len(mat[0]) + (p * 2)
 
