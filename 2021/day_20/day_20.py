@@ -8,6 +8,8 @@ def first_puzzle(algo, mat, enhance_cnt):
     for i in range(enhance_cnt):
         mat = pad(mat, 1, val)
         mat = enhance(algo, mat, val)
+        # as the matrix is being processed simultaneously we have to
+        # predetermine the padding value weather it'll be dark (.) or light (#)
         val = algo[int((val * 9).replace('.', '0').replace('#', '1'), 2)]
 
     for i in mat:
