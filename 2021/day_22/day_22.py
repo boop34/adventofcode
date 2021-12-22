@@ -56,7 +56,7 @@ def get_intersection(x1, x2, y1, y2, z1, z2, ox1, ox2, oy1, oy2, oz1, oz2):
     #   x1--|------x2   |         x1---x2  ox1---ox2
     #   |   |       |   |         |     |   |     |
     #   0 1 2 3 4 5 6 7 8 9 10    0 1 2 3 4 5 6 7 8 9 10
-    #       INTERSECTION            NO INTEREÎySECTION
+    #       INTERSECTION             NO INTERSECTION
     #
     # so in order to see the intersection we have to figire out if the maximum
     # of x1 and ox1 is smaller than minimum of x2 and ox2
