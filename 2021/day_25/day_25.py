@@ -50,3 +50,5 @@ if __name__ == '__main__':
             grid.append([i for i in line.strip()])
 
     print(first_puzzle(grid))
+    # last day so no second part
+
