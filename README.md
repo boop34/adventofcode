@@ -1,3 +1,3 @@
 # adventofcode
-advent of code of several years (currently only 2021)
+advent of code of several years
 https://adventofcode.com/
