@@ -10,7 +10,7 @@ def first_puzzle(hs):
     while idx < n and '1' in b[idx:]:
         version = int(b[idx: idx + 3], 2)
         ver_sum += version
-        
+
         idx += 3
         type_id = int(b[idx: idx + 3], 2)
         idx += 3
