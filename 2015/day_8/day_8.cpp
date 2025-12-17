@@ -60,7 +60,7 @@ int part_two(std::ifstream& input_file) {
 }
 
 int main() {
-    std::ifstream input_file("day_8.in.mini");
+    std::ifstream input_file("day_8.in");
 
     int part_one_sol = part_one(input_file);
 
