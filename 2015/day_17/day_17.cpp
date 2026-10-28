@@ -5,7 +5,7 @@
 #include <unordered_map>
 
 std::unordered_map<int, int> map;
-int part_one_sol = 0;
+int part_one_sol { 0 };
 
 void get_combinations(const std::vector<int>& list,
         int target, size_t idx, std::vector<int>& current
@@ -34,7 +34,7 @@ long long part_one(std::vector<int>& list, const int target) {
 }
 
 int part_two() {
-    int min_sum = 5000;
+    int min_sum { 5000 };
 
     for (auto& [key, value]: map) {
         if (key < min_sum) min_sum = key;
@@ -47,7 +47,7 @@ int main() {
     std::ifstream input_file("day_17.in");
     std::string line;
     std::vector<int> list;
-    const int target = 150;
+    const int target { 150 };
 
     while (std::getline(input_file, line)) {
         list.push_back(std::stoi(line));

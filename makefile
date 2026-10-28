@@ -6,13 +6,13 @@
 
 TARGET = $(detect)
 
-CC = cl
-CFLAGS = /std:c++20 /Wall /EHsc
+CC = clang++
+CFLAGS = -std=c++23 -Wall -Wextra -ggdb -Weffc++ -Wconversion -Wsign-conversion -mavx2 -mbmi -march=native
 
 all: $(TARGET).exe
 
 $(TARGET).exe: $(TARGET).cpp
-        $(CC) $(TARGET).cpp /Fe:$(TARGET).exe $(CFLAGS)
+        $(CC) $(TARGET).cpp -o $(TARGET).exe $(CFLAGS)
 
 run: $(TARGET).exe
         $(TARGET).exe

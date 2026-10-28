@@ -6,3 +6,5 @@
 *.exe
 *.in*
 *.hpp
+*.pdb
+*.json
